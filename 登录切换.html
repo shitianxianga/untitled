@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+      <h1 v-if="flag">手机号</h1>
+       <h1 v-else>邮箱</h1>
+    <input type="button" value="切换" v-on:click="change">
+    </div>
+    <script src="vue-2.4.0.js"></script>
+    <script>
+      const app = new Vue({
+        el:'#app',
+        data:{
+          msg:'你好',
+          flag: true
+        },
+       methods:{
+          change(){
+            this.flag=!this.flag;
+          }
+        }
+      })
+    </script>
+</body>
+</html>

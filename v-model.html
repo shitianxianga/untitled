@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+      <input type="text" v-model="msg">
+    <input type="radio" v-model="sex" name="s" value="男"> 男
+    <input type="radio" v-model="sex" name="s" value="女"> 女
+    {{sex}}
+    </div>
+    <script src="vue-2.4.0.js"></script>
+    <script>
+      const app = new Vue({
+        el:'#app',
+        data:{
+          msg:'你好',
+          sex:''
+        }
+      })
+    </script>
+</body>
+</html>

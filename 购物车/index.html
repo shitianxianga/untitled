@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+<div id="app">
+  <table>
+    <thead>
+    <tr>
+      <th></th>
+      <th>数据名称</th>
+      <th>出版日期</th>
+      <th>价格</th>
+      <th>购买数量</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr v-for="item in books" >
+        <td >{{item.id}}</td>
+        <td >{{item.date}}</td>
+        <td >{{item.name}}</td>
+        <td >{{item.price}}</td>
+        <td ><input type="button" value="+" @click="add(item.id)">{{' '+item.num+' '}}<input type="button" value="-"@click="del(item.id)"></td>
+        <td><button>移除</button></td>
+      </tr>
+
+    </tbody>
+
+  </table>
+  <h2>{{totalPrice}}</h2>
+</div>
+<script src="../vue-2.4.0.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

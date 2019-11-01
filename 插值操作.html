@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<body>
+  <div id ="app">
+      <h1 v-text="msg"></h1>
+      <h2 v-cloak>{{msg}}嘿嘿</h2>
+      <p v-html="msg2"></p>
+
+    </div>
+    <script src="vue-2.4.0.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data:{
+          msg: '你好',
+          msg2: '<h3> 啦啦啦 </h3>'
+        }
+      })
+    </script>
+</body>
+</html>
